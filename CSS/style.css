@@ -1,0 +1,195 @@
+html, body {
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body.active {
+    background: rgb(0, 0, 0);
+}
+
+/*---navbar---*/
+
+.navbar {
+    background: rgb(255, 255, 255);
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    transition: height 1.5s ease-in-out;
+}
+
+.navbar .navMain a {
+    font-size: 1.5em;
+    padding: 1rem 0rem;
+    text-decoration: none;
+    display: block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navmenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.toggle-collapse {
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.toggle-collapse .toggle-icons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.toggle-collapse .toggle-icons i {
+    font-size: 1.4em;
+    color: gray;
+}
+
+.collapse {
+    height: 25rem;
+    background: whitesmoke;
+}
+
+.navItems {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+}
+
+.navLink {
+    padding: 1.6rem 1.5rem;
+    font-size: 1.1em;
+    position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.navLink a {
+    color: #551A8B;
+}
+
+.current {
+    padding: 1.6rem 1.5rem;
+    font-size: 1.1em;
+    position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: black;
+}
+
+.current a {
+    color: white;
+}
+
+.navLink:hover {
+    font-size: 1.2em;
+    background-image: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%);
+}
+
+.navLink:hover a {
+    color: Black;
+}
+
+.social {
+    padding: 1.4rem 0;
+}
+
+.social i {
+    padding: 0 0.2rem;
+}
+
+.social i:hover {
+    color: rgb(0, 4, 65);
+    font-size: 2rem;
+    transition: font 0.5s ease-in-out;
+}
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 210px;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    background: #C9CCD3;
+    border-top: 1px solid black;
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+}
+
+.sidebar.active {
+    background: black;
+}
+
+.navbar.active {
+    background: black;
+}
+
+.sidebar li {
+    display: block;
+    color: black;
+    padding: 0 -0px;
+    margin: 0 10px 0 -30px;
+    text-decoration: none;
+}
+
+#toggleMode {
+    position: relative;
+    top: 2%;
+    width: 50px;
+    cursor: pointer;
+    height: 30px;
+    border-radius: 160px;
+    background: white;
+    margin: 20px;
+    transition: 0.5s;
+    box-shadow: inset 0 8px 60px rgb(217, 125, 240), inset 0 8px 8px rgb(217, 125, 240), inset 0 -4px 4px rgb(217, 125, 240);
+}
+
+#toggleMode .indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 30px;
+    width: 25px;
+    border-radius: 50%;
+    background: rgb(192, 160, 160), ;
+    transform: scale(0.9);
+    box-shadow: 0 8px 40px rgb(247, 222, 200), inset 0 4px 4px rgb(247, 222, 210), inset 0 -4px 4px rgb(247, 222, 210);
+    transition: 0.5s;
+}
+
+#toggleMode.active .indicator {
+    left: 25px;
+}
+
+#toggleMode.active {
+    background: black;
+    box-shadow: inset 0 2px 60px rgba(255, 255, 255, 0.1), inset 0 2px 8px rgba(163, 162, 162, 0.1), inset 0 -4px 8px rgb(0, 0, 0, 0.05);
+}
+
+/*----------General Classes----------*/
+
+a {
+    text-decoration: none;
+}
+
+/*-----------Responsive--------*/
+
+@media only screen and (max-width:750px) {
+    .navbar .navmenu, .navbar .navItems {
+        flex-direction: column;
+    }
+    .toggle-collapse {
+        display: initial;
+    }
+    .sidebar {
+        display: none;
+    }
+}
