@@ -16,11 +16,13 @@ body.active {
     height: 0rem;
     min-height: 10vh;
     overflow: hidden;
-    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    /* background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%); */
+    background: #f7f7f4;
     transition: height 1.5s ease-in-out;
 }
 
 .navbar .navMain a {
+    color: black;
     font-size: 1.5em;
     padding: 1rem 0rem;
     text-decoration: none;
@@ -55,7 +57,7 @@ body.active {
 }
 
 .collapse {
-    height: 25rem;
+    height: 30rem;
     background: whitesmoke;
 }
 
@@ -69,11 +71,11 @@ body.active {
     padding: 1.6rem 1.5rem;
     font-size: 1.1em;
     position: relative;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .navLink a {
-    color: #551A8B;
+    color: black;
 }
 
 .current {
@@ -81,16 +83,19 @@ body.active {
     font-size: 1.1em;
     position: relative;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background: black;
+    /*background: black;*/
 }
 
 .current a {
-    color: white;
+    color: black;
+    font-weight: bold;
+
 }
 
 .navLink:hover {
-    font-size: 1.2em;
-    background-image: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%);
+    font-size: 1.3em;
+    font-weight: bold;
+    transition: font 0.5s ease-in-out;
 }
 
 .navLink:hover a {
@@ -99,6 +104,7 @@ body.active {
 
 .social {
     padding: 1.4rem 0;
+
 }
 
 .social i {
@@ -111,32 +117,8 @@ body.active {
     transition: font 0.5s ease-in-out;
 }
 
-.sidebar {
-    margin: 0;
-    padding: 0;
-    width: 210px;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-    background: #C9CCD3;
-    border-top: 1px solid black;
-    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
-}
-
-.sidebar.active {
-    background: black;
-}
-
 .navbar.active {
-    background: black;
-}
-
-.sidebar li {
-    display: block;
-    color: black;
-    padding: 0 -0px;
-    margin: 0 10px 0 -30px;
-    text-decoration: none;
+    background: #222;
 }
 
 #toggleMode {
@@ -149,7 +131,9 @@ body.active {
     background: white;
     margin: 20px;
     transition: 0.5s;
-    box-shadow: inset 0 8px 60px rgb(217, 125, 240), inset 0 8px 8px rgb(217, 125, 240), inset 0 -4px 4px rgb(217, 125, 240);
+    box-shadow: inset 0 8px 60px rgb(124, 123, 123), 
+                inset 0 8px 8px rgb(0, 0, 0),  
+                inset 0 -4px 4px rgb(0, 0, 0);
 }
 
 #toggleMode .indicator {
@@ -159,19 +143,126 @@ body.active {
     height: 30px;
     width: 25px;
     border-radius: 50%;
-    background: rgb(192, 160, 160), ;
+     background:rgb(202, 201, 201);
     transform: scale(0.9);
-    box-shadow: 0 8px 40px rgb(247, 222, 200), inset 0 4px 4px rgb(247, 222, 210), inset 0 -4px 4px rgb(247, 222, 210);
+    box-shadow: 
+                inset 0 4px 4px rgba(255, 255, 255, 0.938), 
+                inset 0 -4px 4px rgba(255, 255, 255, 0.938);
     transition: 0.5s;
 }
 
 #toggleMode.active .indicator {
     left: 25px;
+    background: rgb(65, 64, 64);
+    transform: scale(0.9);
+    box-shadow:  
+                inset 0 4px 4px rgb(230, 228, 228), 
+                inset 0 -4px 4px rgb(230, 228, 228);
+
 }
 
 #toggleMode.active {
-    background: black;
-    box-shadow: inset 0 2px 60px rgba(255, 255, 255, 0.1), inset 0 2px 8px rgba(163, 162, 162, 0.1), inset 0 -4px 8px rgb(0, 0, 0, 0.05);
+    background: rgb(236, 235, 235);
+    box-shadow: inset 0 2px 60px rgb(255, 255, 255), 
+            inset 0 2px 8px rgb(99, 91, 91), inset 0 -4px 8px rgb(71, 71, 71);
+}
+
+/*----------MAIN------------*/
+
+
+.site-title {
+    background: url('../Media/erol-ahmed-FTy5VSGIfiQ-unsplash.jpg');
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
+
+.site-background {
+    padding-top: 10rem;
+    text-align: center;
+    color: white;
+    text-shadow:
+        -1px -1px 0 rgb(238, 62, 223),
+        1px -1px 0 rgb(99, 129, 226),
+        -1px 1px 0 rgb(99, 129, 226),
+        1px 1px 0 rgb(99, 129, 226);
+}
+
+.site-title h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+}
+
+button.btn {
+    margin: 2rem;
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255);
+    text-shadow:
+        -1px -1px 0 rgb(0, 0, 0),
+        1px -1px 0 rgb(0, 0, 0),
+        -1px 1px 0 rgb(0, 0, 0),
+        1px 1px 0 rgb(107, 107, 107);
+    background-color: rgb(245, 182, 182);
+}
+
+.btn:hover {
+    background: transparent;
+    border: 1px solid black;
+}
+
+/*-------Carousel-------*/
+.blog {
+    background-image: linear-gradient(to top, #f3d5ec 0%, #fad2f1 1%, #e6dee9 100%);
+    width: 100%;
+    height: 100vh;
+}
+
+.blog-post {
+    padding-top: 6rem;
+}
+
+.blog-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgb(88, 88, 230);
+    background: white;
+}
+
+.blog-title {
+    padding: 2rem 0;
+}
+
+main .blog-content .btn-blog {
+    padding: 0.7rem 2rem;
+    margin: 0.5rem;
+    background: rgb(255, 200, 247);
+}
+
+main .blog-content span {
+    display: block;
+    padding-bottom: 2rem;
+}
+
+.owl-nav {
+    position: absolute;
+    top: 0%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.imageBlog {
+    width: 400px;
+    height: 450px;
+  
 }
 
 /*----------General Classes----------*/
@@ -180,16 +271,35 @@ a {
     text-decoration: none;
 }
 
+span {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    margin: 0 5vw;
+}
+
+img {
+    height: 100%; width: 100%; object-fit: cover;
+}
+
 /*-----------Responsive--------*/
 
 @media only screen and (max-width:750px) {
     .navbar .navmenu, .navbar .navItems {
         flex-direction: column;
     }
+
     .toggle-collapse {
         display: initial;
     }
-    .sidebar {
-        display: none;
+
+    #toggleMode {
+        margin-left: auto;
+        margin-right: auto;
+
+
     }
+
+
 }
