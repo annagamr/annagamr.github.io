@@ -15,13 +15,18 @@ $(document).ready(function () {
         dots: false,
         nav:true,
         navText: [$('.owl-navigation .owl-nav-prev'), $('.owl-navigation .owl-nav-next')],
+
     });
 });
 
 $body = $("body");
 $sidebar = $(".sidebar")
 $navbar = $(".navbar")
-$toggleMode = $("#toggleMode");
+$toggleMode = $("#toggleMode")
+$a = $("a[target!='_blank']")
+$current=$(".current")
+$social=$(".social i")
+
 
 $toggleMode.click(function () {
 
@@ -29,5 +34,9 @@ $toggleMode.click(function () {
     $body.toggleClass('active')
     $sidebar.toggleClass('active')
     $navbar.toggleClass('active')
+    $a.toggleClass('active')
+    $current.toggleClass('active')
+    $social.toggleClass('active')
 
+    
 });

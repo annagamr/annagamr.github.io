@@ -24,7 +24,7 @@ body.active {
 .navbar .navMain a {
     color: black;
     font-size: 1.5em;
-    padding: 1rem 0rem;
+    padding: 1.25rem 0rem;
     text-decoration: none;
     display: block;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -75,7 +75,19 @@ body.active {
 }
 
 .navLink a {
-    color: black;
+    color: rgb(0, 0, 0);
+}
+
+.navLink a.active {
+    color: white;
+}
+
+.navbar .navMain a.active {
+    color: rgb(255, 82, 82);
+}
+
+.current a.active {
+    color: rgb(255, 82, 82);
 }
 
 .current {
@@ -102,19 +114,32 @@ body.active {
     color: Black;
 }
 
+.navLink:hover a.active {
+    color: rgb(255, 82, 82);
+}
+
 .social {
-    padding: 1.4rem 0;
+    padding: 1.8rem 0;
 
 }
 
 .social i {
-    padding: 0 0.2rem;
+    padding: 0 0.3rem;
+}
+
+.social i.active {
+    color: rgb(255, 82, 82);
+    ;
 }
 
 .social i:hover {
     color: rgb(0, 4, 65);
     font-size: 2rem;
     transition: font 0.5s ease-in-out;
+}
+
+.social i:hover.active {
+    color: rgb(255, 255, 255);
 }
 
 .navbar.active {
@@ -131,9 +156,9 @@ body.active {
     background: white;
     margin: 20px;
     transition: 0.5s;
-    box-shadow: inset 0 8px 60px rgb(124, 123, 123), 
-                inset 0 8px 8px rgb(0, 0, 0),  
-                inset 0 -4px 4px rgb(0, 0, 0);
+    box-shadow: inset 0 8px 60px rgb(124, 123, 123),
+        inset 0 8px 8px rgb(0, 0, 0),
+        inset 0 -4px 4px rgb(0, 0, 0);
 }
 
 #toggleMode .indicator {
@@ -143,11 +168,11 @@ body.active {
     height: 30px;
     width: 25px;
     border-radius: 50%;
-     background:rgb(202, 201, 201);
+    background: rgb(202, 201, 201);
     transform: scale(0.9);
-    box-shadow: 
-                inset 0 4px 4px rgba(255, 255, 255, 0.938), 
-                inset 0 -4px 4px rgba(255, 255, 255, 0.938);
+    box-shadow:
+        inset 0 4px 4px rgba(255, 255, 255, 0.938),
+        inset 0 -4px 4px rgba(255, 255, 255, 0.938);
     transition: 0.5s;
 }
 
@@ -155,28 +180,31 @@ body.active {
     left: 25px;
     background: rgb(65, 64, 64);
     transform: scale(0.9);
-    box-shadow:  
-                inset 0 4px 4px rgb(230, 228, 228), 
-                inset 0 -4px 4px rgb(230, 228, 228);
+    box-shadow:
+        inset 0 4px 4px rgb(230, 228, 228),
+        inset 0 -4px 4px rgb(230, 228, 228);
 
 }
 
 #toggleMode.active {
     background: rgb(236, 235, 235);
-    box-shadow: inset 0 2px 60px rgb(255, 255, 255), 
-            inset 0 2px 8px rgb(99, 91, 91), inset 0 -4px 8px rgb(71, 71, 71);
+    box-shadow: inset 0 2px 60px rgb(255, 255, 255),
+        inset 0 2px 8px rgb(99, 91, 91), inset 0 -4px 8px rgb(71, 71, 71);
 }
 
 /*----------MAIN------------*/
 
-
 .site-title {
     background: url('../images/main.jpg');
-    background-size: cover;
-    height: 110vh;
+    background-size: 100% auto;
+    height: 90vh;
     display: flex;
     justify-content: center;
+    background-repeat: no-repeat;
+    /* max-width: 100%;
+    height:auto; */
 }
+
 
 .site-background {
     padding-top: 10rem;
@@ -187,6 +215,7 @@ body.active {
         1px -1px 0 rgb(99, 129, 226),
         -1px 1px 0 rgb(99, 129, 226),
         1px 1px 0 rgb(99, 129, 226);
+
 }
 
 .site-title h1 {
@@ -236,10 +265,10 @@ main .blog-post .blog-content {
     margin: 3rem 2rem;
     box-shadow: 0 20px 25px rgb(143, 145, 252);
     background: white;
-    
+
 }
 
-main .blog-content title{
+main .blog-content title {
     padding: 25rem 0;
 }
 
@@ -254,36 +283,104 @@ main .blog-content span {
     padding-bottom: 2rem;
 }
 
- .imageBlog {
-overflow: hidden;
-} 
+.imageBlog {
+    overflow: hidden;
+}
 
 .imageBlog img {
-    height:400px;
-    width:400px;
+    height: 400px;
+    width: 400px;
     min-height: 500px;
     min-width: 450px;
     max-width: 100%;
 }
 
-section .container .owl-nav{
+section .container .owl-nav {
     position: absolute;
     top: 3%;
     margin: 0 auto;
     width: 100%;
 }
 
-.owl-theme .owl-nav [class*=owl-]{
-    
+.owl-theme .owl-nav [class*=owl-] {
+
     background: transparent;
-    font-size:2rem;
-    color:rgb(112, 170, 247);
+    font-size: 2rem;
+    color: rgb(112, 170, 247);
 }
 
-.owl-theme .owl-nav [class*='owl-']:hover{
+.owl-theme .owl-nav [class*='owl-']:hover {
     background: transparent;
-    color:rgb(168, 109, 109);
+    color: rgb(168, 109, 109);
 }
+
+/*----x---Carousel---x----*/
+
+.info {
+    display: grid;
+    grid-template-columns: 70% 30%;
+
+}
+
+.container .info .posts .post-content .post-image img {
+    width: 70%;
+    height: auto;
+    margin-top: 100px;
+    transition: all 1s ease;
+}
+
+.post-content {
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.container .info .posts .post-content>.post-image, .post-title {
+    padding: 1rem 2rem;
+    position: relative;
+
+}
+
+.info .post-content>.post-image .post-tag {
+    background-color: rgb(0, 0, 0);
+    padding: 1rem;
+    position: absolute;
+    bottom: 0%;
+    left: 15vw;
+    border-radius: 3rem;
+
+}
+
+.info .post-content> .post-image > div{
+    overflow: hidden;
+}
+
+.info .post-content>.post-image img:hover{
+    transform: scale(1.1);
+
+}
+.post-content .post-title a {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3rem;
+    color: rgb(255, 137, 137);
+}
+
+.info .post-content .post-title .post-btn {
+    border-radius:0;
+    padding: .7rem 1rem;
+    margin:0;
+    background-color:rgb(255, 137, 137);
+}
+
+
+
+
+
+
+
+.text-gray {
+    color: rgb(196, 196, 196)
+}
+
 
 /*----x------MAIN------x------*/
 
@@ -294,24 +391,24 @@ section .container .owl-nav{
 }
 
 .gallery img {
-    transition:1s;
-    padding:20px;
+    transition: 1s;
+    padding: 20px;
     padding-top: 50px;
     text-align: center;
     width: 350px;
-    height:470px;
+    height: 470px;
     max-width: 100%;
 }
 
 .gallery img:hover {
- transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 
-.gallery h1{
-    font-family:cursive;
+.gallery h1 {
+    font-family: cursive;
     font-size: 30px;
-    margin:0%;
+    margin: 0%;
     padding-top: 70px;
     color: white;
     text-shadow:
@@ -320,8 +417,9 @@ section .container .owl-nav{
         -1px 1px 0 rgb(0, 49, 209),
         1px 1px 0 rgb(0, 49, 209);
 }
-.gallery h2{
-    font-family:cursive;
+
+.gallery h2 {
+    font-family: cursive;
     font-size: 20px;
     color: white;
     text-shadow:
@@ -333,59 +431,59 @@ section .container .owl-nav{
 
 
 #galleryChristmas {
-        display: inline-block;
-        vertical-align: middle;
-        width: 100%;
-        /* margin-top: 100px; */
-        padding-bottom: 30px;
-        /* background-color: beige; */
-        background-image: url("../images/joanna-kosinska-9T_S-7oGZZU-unsplash.jpg");
-        background-position: center;
-        background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    /* margin-top: 100px; */
+    padding-bottom: 30px;
+    /* background-color: beige; */
+    background-image: url("../images/joanna-kosinska-9T_S-7oGZZU-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 #galleryChristmas img {
     width: 420px;
-    height:500px;
+    height: 500px;
 }
 
-#galleryChristmas h1{
+#galleryChristmas h1 {
     color: #f1e3cd;
-    margin:0px;
-    padding-top:50px;
+    margin: 0px;
+    padding-top: 50px;
 }
 
 #galleryBudapest {
-    background-color:#cfc6fc;
-   padding-bottom: 70px;
+    background-color: #cfc6fc;
+    padding-bottom: 70px;
 }
 
 
 #galleryBudapest img {
     width: 420px;
- 
+
 }
 
 #galleryBudapestFaces {
-    background: -webkit-linear-gradient(70deg, #c3d4c1  30%, rgba(0,0,0,0) 30%), -webkit-linear-gradient(30deg, #c3d4c1 50%, #a999f5 80%);
+    background: -webkit-linear-gradient(70deg, #c3d4c1 30%, rgba(0, 0, 0, 0) 30%), -webkit-linear-gradient(30deg, #c3d4c1 50%, #a999f5 80%);
     padding-bottom: 70px;
 
 }
 
-#galleryMoon h1{
+#galleryMoon h1 {
     color: #f1e3cd;
-    margin:0px;
-    padding-top:50px;
+    margin: 0px;
+    padding-top: 50px;
 }
 
 #galleryMoon {
     /* background-image: url("../images/night3.jpg"); */
     background-color: #a99bf3;
     width: 100%;
-    padding-top:50px;
+    padding-top: 50px;
     padding-bottom: 100px;
     background-position: center;
-        background-size: cover;
+    background-size: cover;
 }
 
 #home {
@@ -406,18 +504,18 @@ section .container .owl-nav{
     font-size: 50px;
     line-height: 70px;
     color: #e1e8f5;
-    text-shadow: 0 13.36px 8.896px #c4b59d,0 -2px 1px rgb(58, 58, 58);
+    text-shadow: 0 13.36px 8.896px #c4b59d, 0 -2px 1px rgb(58, 58, 58);
     letter-spacing: -5px;
-  }
+}
 
-  #Tbilisi {
+#Tbilisi {
     background-image: linear-gradient(to top, #fddb92 0%, #c3d4c1 100%);
-    
-  }
 
-  #Tbilisi img {
+}
+
+#Tbilisi img {
     width: 340px;
- 
+
 }
 
 #Batumi {
@@ -425,8 +523,9 @@ section .container .owl-nav{
     background-position: center;
     background-size: cover;
     padding-bottom: 80px;
-  
+
 }
+
 /*----x------PHOTOGRAPHY------x------*/
 
 
@@ -440,13 +539,23 @@ a {
 
 .container {
     margin: 0 5vw;
+
 }
 
-.flex-row{
+.flex-row {
     display: flex;
-    flex-direction: row;    
+    flex-direction: row;
     flex-wrap: wrap;
 }
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    line-height: 35px;
+    color: rgb(100, 100, 100);
+}
+
+
 /*-----------Responsive--------*/
 
 @media only screen and (max-width:750px) {
