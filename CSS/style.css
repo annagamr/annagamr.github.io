@@ -196,15 +196,23 @@ body.active {
 
 .site-title {
     background: url('../images/main.jpg');
-    background-size: 100% auto;
-    height: 90vh;
+    /* background-size: 100% auto;
+    height: 90vh; */
+    background-size: cover;
+    height: 110vh;
     display: flex;
     justify-content: center;
-    background-repeat: no-repeat;
     /* max-width: 100%;
     height:auto; */
 }
 
+.site-title.active {
+    background: url('../images/night3.jpg');
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
 
 .site-background {
     padding-top: 10rem;
@@ -247,10 +255,15 @@ button.btn {
 
 /*-------Carousel-------*/
 main .blog {
-    background-image: linear-gradient(to top, #f3d5ec 0%, #fad2f1 1%, #e6dee9 100%);
+    background-color: rgb(247, 235, 237);
     width: 100%;
     height: 100vh;
     background-size: 100%;
+}
+
+main .blog.active {
+    background-color: rgb(0, 0, 0);
+
 }
 
 main .blog .blog-post {
@@ -269,7 +282,7 @@ main .blog-post .blog-content {
 }
 
 main .blog-content title {
-    padding: 25rem 0;
+    padding: 2rem 0;
 }
 
 main .blog-content .btn-blog {
@@ -280,10 +293,9 @@ main .blog-content .btn-blog {
 
 main .blog-content span {
     display: block;
-    padding-bottom: 2rem;
 }
 
-.imageBlog {
+/* .imageBlog {
     overflow: hidden;
 }
 
@@ -293,20 +305,19 @@ main .blog-content span {
     min-height: 500px;
     min-width: 450px;
     max-width: 100%;
-}
+} */
 
 section .container .owl-nav {
     position: absolute;
-    top: 3%;
+    top: 0%;
     margin: 0 auto;
     width: 100%;
 }
 
-.owl-theme .owl-nav [class*=owl-] {
-
+.owl-theme .owl-nav [class*='owl-'] {
     background: transparent;
     font-size: 2rem;
-    color: rgb(112, 170, 247);
+    color: rgb(1, 45, 104);
 }
 
 .owl-theme .owl-nav [class*='owl-']:hover {
@@ -318,13 +329,14 @@ section .container .owl-nav {
 
 .info {
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 80% 20%;
 
 }
 
 .container .info .posts .post-content .post-image img {
-    width: 70%;
+    width: 800px;
     height: auto;
+    max-width: 60%;
     margin-top: 100px;
     transition: all 1s ease;
 }
@@ -335,7 +347,7 @@ section .container .owl-nav {
 }
 
 .container .info .posts .post-content>.post-image, .post-title {
-    padding: 1rem 2rem;
+    padding: 1rem 3rem;
     position: relative;
 
 }
@@ -350,32 +362,27 @@ section .container .owl-nav {
 
 }
 
-.info .post-content> .post-image > div{
+.info .post-content>.post-image>div {
     overflow: hidden;
 }
 
-.info .post-content>.post-image img:hover{
+.info .post-content>.post-image img:hover {
     transform: scale(1.1);
 
 }
+
 .post-content .post-title a {
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 3rem;
-    color: rgb(255, 137, 137);
+    color: rgb(218 95 98);
 }
 
 .info .post-content .post-title .post-btn {
-    border-radius:0;
+    border-radius: 0;
     padding: .7rem 1rem;
-    margin:0;
-    background-color:rgb(255, 137, 137);
+    margin: 0;
+    background-color: rgb(218 95 98);
 }
-
-
-
-
-
-
 
 .text-gray {
     color: rgb(196, 196, 196)
@@ -383,6 +390,101 @@ section .container .owl-nav {
 
 
 /*----x------MAIN------x------*/
+
+/*----------FOOTER------------*/
+footer.footer {
+    height: 100%;
+    background-color: #f7f7f4;
+    position: relative;
+}
+
+footer.footer.active {
+    background: rgb(0, 0, 0);
+    border: 2px solid rgb(218 95 98);
+}
+
+footer.footer .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer.footer .container>div {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem .9rem;
+}
+
+footer.footer .container h2 {
+    color: rgb(0, 0, 0)
+}
+
+footer.footer .container h2.active {
+    color: rgb(255, 255, 255)
+}
+
+footer.footer .newsletter .form-element {
+    background: black;
+    display: inline-block;
+}
+
+footer.footer .newsletter .form-element input {
+    padding: .5rem .7rem;
+    border: none;
+    background: transparent;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    width: 74%;
+}
+
+footer.footer .newsletter .form-element span {
+    background: rgb(199, 197, 197);
+    padding: .5rem 1.1rem;
+    cursor: pointer;
+}
+
+footer.footer .instagram div>img {
+    display: inline-block;
+    width: 25%;
+    height: 50%;
+    margin: .3rem .4rem;
+    border-radius: 40%;
+    border: 2px solid rgb(218 95 98);
+}
+
+footer.footer .follow div i {
+    color: rgb(209, 19, 22);
+    padding: 0 .4rem;
+    font-size: larger;
+}
+
+footer.footer .rights {
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+footer.footer .move-up {
+    position: absolute;
+    right: 6%;
+    top: 50%;
+}
+
+footer.footer .move-up span {
+    color: rgb(0, 0, 0);
+}
+
+footer.footer .move-up span.active {
+    color: rgb(255, 255, 255);
+}
+
+footer.footer .move-up span:hover {
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+}
+
+
+/*----x------FOOTER------x------*/
 
 /*----------PHOTOGRAPHY------------*/
 
@@ -527,9 +629,108 @@ section .container .owl-nav {
 }
 
 /*----x------PHOTOGRAPHY------x------*/
+/*-----------FORM-----------*/
+form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+}
+
+form:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url("img/bg.jpg") no-repeat center;
+    background-size: cover;
+    filter: blur(50px);
+    z-index: -1;
+}
+
+.contact-box {
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+}
+
+.left {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.left img {
+    width:
+        425px;
+    /* height:630px; */
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.right {
+    padding: 25px 40px;
+}
+
+h2 {
+    position: relative;
+    padding: 0 0 10px;
+    margin-bottom: 10px;
+}
+
+.field {
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0);
+    outline: none;
+    background-color: rgba(230, 230, 230, 0.6);
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: .3s;
+}
+
+.field:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    min-height: 150px;
+}
+
+.btn1 {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: #2ecc71;
+    color: #fff;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn1:hover {
+    background-color: #27ae60;
+}
+
+.field:focus {
+    border: 2px solid rgba(30, 85, 250, 0.47);
+    background-color: #fff;
+}
 
 
-
+/*------x----FORM-----x-----*/
 
 /*----------General Classes----------*/
 
@@ -548,7 +749,7 @@ a {
     flex-wrap: wrap;
 }
 
-p{
+p {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.5rem;
     line-height: 35px;
@@ -557,6 +758,35 @@ p{
 
 
 /*-----------Responsive--------*/
+/*              Viewport less then or equal to 1130px            */
+
+@media only screen and (max-width: 1130px) {
+    .posts .post-content>.post-image .post-tag {
+        left: 2rem !important;
+        bottom: 1.2rem !important;
+        border-radius: 0% !important;
+    }
+
+
+    footer.footer .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+
+    .left {
+        height: 400px;
+    }
+
+    .left img {
+        padding-top: 15px;
+    }
+}
+
+/*      x       Viewport less then or equal to 1130px    x     */
+
 
 @media only screen and (max-width:750px) {
     .navbar .navmenu, .navbar .navItems {
@@ -574,5 +804,33 @@ p{
 
     }
 
+    footer.footer .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+}
+
+@media only screen and (max-width: 520px) {
+    main .blog {
+        height: 125vh;
+    }
+
+    .site-content .post-content>.post-image .post-info {
+        display: none;
+    }
+
+    footer.footer .container>div {
+        padding: 1rem .9rem !important;
+    }
+
+    footer .rights {
+        padding: 0 1.4rem;
+        text-align: center;
+    }
+
+    nav .toggle-collapse {
+        width: 80% !important;
+    }
 
 }
