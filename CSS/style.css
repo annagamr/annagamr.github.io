@@ -341,7 +341,7 @@ section .container .owl-nav {
     transition: all 1s ease;
 }
 
-.post-content {
+.container .info .posts .post-content {
     width: 100%;
     margin-bottom: 5rem;
 }
@@ -423,22 +423,25 @@ footer.footer .container h2.active {
 }
 
 footer.footer .newsletter .form-element {
-    background: black;
+    background: rgb(201, 85, 87);
+    ;
     display: inline-block;
+    width: 65%;
+
 }
 
 footer.footer .newsletter .form-element input {
     padding: .5rem .7rem;
-    border: none;
+    border: 2px black solid;
     background: transparent;
-    color: white;
+    color: rgb(0, 0, 0);
     font-family: 'Times New Roman', Times, serif;
     font-size: 1rem;
-    width: 74%;
+    width: 63.5%;
 }
 
 footer.footer .newsletter .form-element span {
-    background: rgb(199, 197, 197);
+    background: rgb(201, 85, 87);
     padding: .5rem 1.1rem;
     cursor: pointer;
 }
@@ -647,9 +650,6 @@ form:after {
     height: 100%;
     left: 0;
     top: 0;
-    background: url("img/bg.jpg") no-repeat center;
-    background-size: cover;
-    filter: blur(50px);
     z-index: -1;
 }
 
@@ -681,6 +681,7 @@ form:after {
 
 .right {
     padding: 25px 40px;
+    margin-right: 25px;
 }
 
 h2 {
@@ -730,6 +731,7 @@ textarea {
 }
 
 
+
 /*------x----FORM-----x-----*/
 
 /*----------General Classes----------*/
@@ -756,17 +758,106 @@ p {
     color: rgb(100, 100, 100);
 }
 
+/*-----------Hobbies--------*/
+.containerHobbies {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0ddae;
+}
+
+.containerHobbies .leftImage img {
+    max-width: 100%;
+    width: 600px;
+
+}
+
+.leftImage {
+    flex-basis: 90%
+}
+
+.rightText {
+    font-size: 30px !important;
+    color: black !important;
+
+}
+
+.rightText p {
+    color: black;
+}
+
+.aboutBooks {
+    background-size: cover;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    margin: 20px 0;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.bookSection .bookTitles h2, .favoriteBooks h2 {
+    font-size: 35px;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.card {
+
+    margin-top: 50px;
+    box-shadow: 0 4px 8px 0 rgba(51, 1, 1, 0.2);
+    padding: 10px;
+    text-align: center;
+    background-color: #E5E3C4;
+}
+
+.cardColumn {
+
+    float: left;
+    width: 33.33%;
+
+}
+
+/* Remove extra left and right margins, due to padding */
+.cardRow {
+    margin: 0 -10px;
+}
+
+/* Clear floats after the columns */
+.cardRow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*------x-----Hobbies----x----*/
+
 
 /*-----------Responsive--------*/
 /*              Viewport less then or equal to 1130px            */
 
 @media only screen and (max-width: 1130px) {
     .posts .post-content>.post-image .post-tag {
-        left: 2rem !important;
+        left: 3rem !important;
         bottom: 1.2rem !important;
         border-radius: 0% !important;
     }
 
+    .posts .post-content>.post-image {
+        width: 100%;
+        height: auto;
+        width: 600px;
+    }
 
     footer.footer .container {
         grid-template-columns: repeat(2, 1fr);
@@ -777,12 +868,10 @@ p {
     }
 
     .left {
-        height: 400px;
+        display: none;
     }
 
-    .left img {
-        padding-top: 15px;
-    }
+
 }
 
 /*      x       Viewport less then or equal to 1130px    x     */
@@ -797,6 +886,14 @@ p {
         display: initial;
     }
 
+    .post-content .post-title a {
+        font-size: 30px;
+    }
+
+    .post-content .post-title p {
+        font-size: 20px;
+    }
+
     #toggleMode {
         margin-left: auto;
         margin-right: auto;
@@ -804,16 +901,51 @@ p {
 
     }
 
+    .posts .post-content>.post-image {
+        width: 100%;
+        height: auto;
+        width: 600px;
+    }
+
     footer.footer .container {
         grid-template-columns: repeat(1, 1fr);
     }
 
+    footer.footer .newsletter {
+        display: none;
+    }
 
+    .post-content .post-tag {
+        display: none;
+    }
+
+    .cardColumn {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 520px) {
     main .blog {
         height: 125vh;
+    }
+
+    .posts .post-content>.post-image {
+        width: 100%;
+        height: auto;
+        width: 300px;
+    }
+
+    .post-content .post-title a {
+        font-size: 22px;
+    }
+
+    .info {
+        display: grid;
+        grid-template-columns: 100% 0%;
+    }
+
+    .post-content .post-title p {
+        display: none;
     }
 
     .site-content .post-content>.post-image .post-info {
@@ -831,6 +963,14 @@ p {
 
     nav .toggle-collapse {
         width: 80% !important;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .cardColumn {
+        width: 100%;
     }
 
 }
