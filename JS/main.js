@@ -23,7 +23,7 @@ $(document).ready(function () {
 
     $('.owl-carousel').owlCarousel({
         loop: true,
-        autoplay: false,
+        autoplay: true,
         autoplayTimeout: 3000,
         dots: false,
         nav: true,
@@ -61,3 +61,15 @@ $toggleMode.click(function () {
     $blog.toggleClass('active')
     $site_title.toggleClass('active')
 });
+
+// click to scroll top
+$('.move-up span').click(function () {
+    $('html, body').animate({
+        scrollTop: 0
+    }, 1000);
+})
+
+// AOS Instance
+AOS.init();
+
+

@@ -394,7 +394,7 @@ section .container .owl-nav {
 /*----------FOOTER------------*/
 footer.footer {
     height: 100%;
-    background-color: #f7f7f4;
+    background-color: #ebecec;
     position: relative;
 }
 
@@ -423,26 +423,24 @@ footer.footer .container h2.active {
 }
 
 footer.footer .newsletter .form-element {
-    background: rgb(201, 85, 87);
-    ;
+    background: rgb(218, 218, 218);
     display: inline-block;
-    width: 65%;
+
 
 }
 
 footer.footer .newsletter .form-element input {
     padding: .5rem .7rem;
-    border: 2px black solid;
     background: transparent;
     color: rgb(0, 0, 0);
     font-family: 'Times New Roman', Times, serif;
     font-size: 1rem;
-    width: 63.5%;
+    width: 74%;
 }
 
 footer.footer .newsletter .form-element span {
-    background: rgb(201, 85, 87);
-    padding: .5rem 1.1rem;
+    background: rgb(218, 218, 218);
+    padding: .5rem .7rem;
     cursor: pointer;
 }
 
@@ -684,12 +682,6 @@ form:after {
     margin-right: 25px;
 }
 
-h2 {
-    position: relative;
-    padding: 0 0 10px;
-    margin-bottom: 10px;
-}
-
 .field {
     width: 100%;
     border: 2px solid rgba(0, 0, 0, 0);
@@ -758,22 +750,27 @@ p {
     color: rgb(100, 100, 100);
 }
 
+
+
 /*-----------Hobbies--------*/
 .containerHobbies {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #e0ddae;
+    background-color: #faede3;
+
 }
 
 .containerHobbies .leftImage img {
     max-width: 100%;
     width: 600px;
-
+    margin-bottom: -4px;
+    margin-left: -2px;
+    ;
 }
 
 .leftImage {
-    flex-basis: 90%
+    flex-basis: 100%;
 }
 
 .rightText {
@@ -796,7 +793,7 @@ p {
 .column {
     float: left;
     width: 50%;
-    margin: 20px 0;
+
 }
 
 /* Clear floats after the columns */
@@ -806,19 +803,40 @@ p {
     clear: both;
 }
 
-.bookSection .bookTitles h2, .favoriteBooks h2 {
-    font-size: 35px;
+
+.bookSection .bookTitles h2 {
+    color: #ff4a4a;
+    font-size: 40px;
     text-align: center;
-    margin-top: 70px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.favoriteBooks h2 {
+    color: #ff4a4a;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.row {
+    /* background-color: #faede3; */
+    margin: 0px 50px;
+}
+
+.column p {
+    color: black;
+    line-height: 45px;
 }
 
 .card {
 
     margin-top: 50px;
-    box-shadow: 0 4px 8px 0 rgba(51, 1, 1, 0.2);
+    box-shadow: 0 2px 4px 0 black;
     padding: 10px;
     text-align: center;
-    background-color: #E5E3C4;
+    /* background-color: #E5E3C4; */
 }
 
 .cardColumn {
@@ -828,9 +846,15 @@ p {
 
 }
 
+.bookSection hr {
+
+    margin: 20px 100px;
+    height: 1px;
+}
+
 /* Remove extra left and right margins, due to padding */
 .cardRow {
-    margin: 0 -10px;
+    margin: 20px 5px;
 }
 
 /* Clear floats after the columns */
@@ -838,6 +862,78 @@ p {
     content: "";
     display: table;
     clear: both;
+}
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.vinylContainer img {
+    border: 2px solid #ea0e00;
+    border-radius: 50%;
+    width: 550px;
+    box-shadow: rgb(77, 38, 38) 0px 20px 30px -10px;
+    animation-name: rotate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    flex-basis: 70%;
+    margin-left: 70px;
+} 
+
+.containerMusic p {
+    font-size: 30px;
+    padding-left: 20px;
+    color: black;
+    line-height: 50px;
+    margin: 0 70px;
+}
+
+.containerMusic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+
+}
+
+.Music {
+    background-color: rgb(248, 243, 238);
+}
+
+.Music h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 80px;
+    padding-top: 40px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /*------x-----Hobbies----x----*/
@@ -921,6 +1017,7 @@ p {
 
     .cardColumn {
         width: 100%;
+
     }
 }
 
